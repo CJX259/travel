@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function cal(now, times,myBlood,myNow){
+    //输入当前疲劳伤害，能抽的次数
+    //我的血量，我的疲劳次数，我的当前疲劳伤害
+    let myTimes = times ;
+    let sum = 0;
+    times = times +1;
+    for(let i = 1;i <= times;i++){
+        sum += ++now;
+    }
+    console.log('对敌人造成'+sum +'伤害');
+    if(myBlood){
+        let mySum = 0;
+        for(let i =1 ; i<=myTimes; i++){
+            mySum += ++myNow;
+        }
+        console.log('对自己造成'+mySum+'伤害');
+        if(mySum >= myBlood){
+            console.log('会死');
+        }else{
+            console.log('不会死');
+        }
+    }
+}
+var list = [-1, 8, 16,-2 ];
+//敌人当前1 疲劳   2 抽卡次数(不算结束回合对面抽卡)  3 我的血量 4我的疲劳
+//函数柯里化
+function curry(func, ...arg){
+    return function (...subArgs){
+        const allArgs = [...arg, ...subArgs];
+        if(allArgs.length >= func.length){
+            return func(...allArgs)
+        }else{
+            //参数不够
+            return curry(func, ...allArgs);
+        }
+    }
+}
+function cal(a,b,c,d){
+    return a + b * c - d;
+}
+const newCal = curry(cal, 1,2);
+console.log(newCal(3,4));
+
+
+cal(...list);
+</script>
+</body>
+</html>

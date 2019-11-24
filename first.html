@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/first.css">
+</head>
+<body>
+        <div class="banner-top">
+            <!-- 导航条 -->
+            <div class="navigation">
+                <div class="container">
+                    <nav class="navbar  navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                            <!-- 适配小屏幕 按钮下拉菜单内容-->
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <!-- <span class="sr-only">Toggle navigation</span> -->
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                            <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                            <h1>各地风光</h1>
+                            <!-- 关于我们 -->
+                            <div class="about-us">
+                              <h4>About Us</h4>
+                            </div>
+                            </div>
+                            <!-- 当屏幕尺寸够时，显示整体，不够时通过点击按钮来下拉展示 -->
+                            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                  <li><a href="./index.html">回银河系</a></li>
+                                  <li><a href="#china">龙之故土</a></li>
+                                  <li><a href="#europe">西域风情</a></li>
+                                  <li><a href="#riben">东瀛扶桑</a></li>
+                                  <!-- <li><a href="#about">关于我们</a></li>                                   -->
+                                </ul>
+                            </div>
+                            <!-- 适配结束 -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- 轮播图 有空可以去做一下移动端滑动图片实现切换-->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+ 
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item">
+                <img src="./img/图片/瑞典/瑞典3.jpg" alt="">
+                <div class="carousel-caption">
+                <h3>林间小路</h3>
+                </div>
+              </div>
+              <div class="item">
+                <img src="./img/图片/瑞典/瑞典4.jpg" alt="">
+                <div class="carousel-caption">
+                  <h3>岸边路伴</h3>
+                </div>
+              </div>
+              <div class="item">
+                <img src="./img/图片/日本/日本3.jpg" alt="">
+                <div class="carousel-caption">
+                  <h3>飘樱坠瓦</h3>
+                </div>
+              </div>
+              <div class="item">
+                <img src="./img/图片/瑞典/瑞典5.jpg" alt="">
+                <div class="carousel-caption">
+                  <h3>海屿晚霞</h3>
+                </div>
+              </div>
+              <div class="item active">
+                <img src="./img/图片/瑞典/瑞典2.jpg" alt="">
+                <div class="carousel-caption">
+                    <h3>蔚橙之间</h3>
+                </div>
+              </div>
+              <div class="item">
+                <img src="./img/图片/瑞典/瑞典7.jpg" alt="">
+                <div class="carousel-caption">
+                <h3>教堂长廊</h3>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Controls 左右箭头 -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+          </div>
+          <!-- 轮播结束 -->
+          <!-- 介绍 -->
+          <div class="introduce" id="introduce">
+            <!-- 本地 -->
+            <div class="container-fluid">
+              <div id="china" class="row">
+                <h2>中国</h2>
+                <!-- 桂林 1 -->
+                    <div class="col-md-4 col-sm-4 col-lg-4 scenery" data-id="0">
+                        <a href="#" data-toggle="modal" data-target="#gl">
+                            <img src="./img/scenery/1.jpg" alt="">
+                            <div class="textbox">
+                              <p>
+                                <i class="glyphicon glyphicon-camera" aria-hidden="true"></i>
+                              </p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 长城 2 -->
+                    <div class="col-md-4 col-sm-4 col-lg-4 scenery" data-id="1">
+                        <a href="#" data-toggle="modal" data-target="#cc">
+                            <img src="./img/scenery/2.jpg" alt="">
+                            <div class="textbox">
+                              <p>
+                                <i class="glyphicon glyphicon-camera" aria-hidden="true"></i>
+                              </p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 西藏布达拉宫 3 -->
+                    <div class="col-md-4 col-sm-4 col-lg-4 scenery" data-id="2">
+                        <a href="#" data-toggle="modal" data-target="#xz">
+                            <img src="./img/scenery/3.jpg" alt="">
+                            <div class="textbox">
+                              <p>
+                                <i class="glyphicon glyphicon-camera" aria-hidden="true"></i>
+                              </p>
+                            </div>
+                        </a>
+                    </div>
+              </div>
+            </div>
+            <!-- 本土结束 -->
+            <!-- 欧洲开始 -->
+            <div class="container-fluid">
+                <div id="europe" class="row">
+                <h2>欧洲</h2>
+                    <!-- 爱琴海 4 -->
+                    <div class="col-md-4 col-sm-4 col-lg-4 scenery" data-id="3">
+                        <a href="#" data-toggle="modal" data-target="#aqh">
+                          <img src="./img/scenery/4.jpg" alt="">
+                          <div class="textbox">
+                            <p>
+                              <i class="glyphicon glyphicon-camera" aria-hidden="true"></i>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- 贝加尔湖 5 -->
+                      <div class="col-md-4 col-sm-4 col-lg-4 scenery" data-id="4">
+                        <a href="#" data-toggle="modal" data-target="#njeh">
+                          <img src="./img/scenery/5.jpg" alt="">
+                          <div class="textbox">
+                            <p>
+                              <i class="glyphicon glyphicon-camera" aria-hidden="true"></i>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- 罗马斗兽场 6 -->
+                      <div class="col-md-4 col-sm-4 col-lg-4 scenery" data-id="5">
+                        <a href="#" data-toggle="modal" data-target="#dsc">
+                          <img src="./img/scenery/6.jpg" alt="">
+                          <div class="textbox">
+                            <p>
+                              <i class="glyphicon glyphicon-camera" aria-hidden="true"></i>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+            </div>
+            <!-- 欧洲结束  -->
+            <!-- 日本开始 -->
+            <div class="container-fluid">
+                <div id="riben" class="row">
+                <h2>日本</h2>
+                <!-- 福岛县 -->
+                <div class="col-md-4 col-sm-4 col-lg-4 scenery" data-id="6">
+                    <a href="#" data-toggle="modal" data-target="#fd">
+                      <img src="./img/scenery/7.jpg" alt="">
+                      <div class="textbox">
+                        <p>
+                          <i class="glyphicon glyphicon-camera" aria-hidden="true"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- 镰仓 -->
+                  <div class="col-md-4 col-sm-4 col-lg-4 scenery" data-id="7">
+                    <a href="#" data-toggle="modal" data-target="#lc">
+                      <img src="./img/scenery/8.jpg" alt="">
+                      <div class="textbox">
+                        <p>
+                          <i class="glyphicon glyphicon-camera" aria-hidden="true"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- 长野 -->
+                  <div class="col-md-4 col-sm-4 col-lg-4 scenery" data-id="8">
+                    <a href="#" data-toggle="modal" data-target="#cy">
+                      <img src="./img/scenery/9.jpg" alt="">
+                      <div class="textbox">
+                        <p>
+                          <i class="glyphicon glyphicon-camera" aria-hidden="true"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- 关于我们弹出框 -->
+          <div class="about" id="about">
+              <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            <h3>我们的成员</h3>
+            <div class="cjx">
+              <img src="./img/陈建希.jpg" alt="">
+              <h4>陈建希</h4>
+              <p>负责本作品的代码实现，爱游戏更爱代码，志在成为一名优秀程序员</p>
+            </div>
+            <div class="lh">
+              <img src="./img/灏哥.jpg" alt="">
+              <h4>李灏</h4>
+              <p>负责本作品图片的美工，爱好画画 喜欢设计 想有一天走遍世界 希望未来能当个不秃头的程序猿 </p>
+            </div>
+            <div class="xmg">
+              <img src="./img/小马哥.jpg" alt="">
+              <h4>马秋同</h4>
+              <p>负责本作品的素材收集及资金供应,爱好看动漫，看科幻小说，科幻电影</p>
+            </div>
+            <span>Tel:18718642229</span>
+          </div>
+          <!-- module区 弹出框 -->
+          <div class="model">
+              <div class="model-mask"></div>
+              <div class="model-content">
+              </div>
+          </div>
+        
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="./js/first.js"></script>
+</body>
+</html>
